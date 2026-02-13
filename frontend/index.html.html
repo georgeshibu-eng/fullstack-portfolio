@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glen George Shibu | Portfolio</title>
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      color: #ffffff;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a2e, #16213e);
+      background-attachment: fixed;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,0.05), transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(255,255,255,0.04), transparent 40%);
+      z-index: -1;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px 50px;
+    }
+
+    header h1 {
+      font-size: 44px;
+      font-weight: 700;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #cccccc;
+    }
+
+    .resume-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #00adb5;
+      color: #fff;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .resume-btn:hover {
+      background: #008c94;
+    }
+
+    nav {
+      text-align: center;
+      padding: 15px;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #00adb5;
+    }
+
+    section {
+      padding: 80px 10%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 32px;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.06);
+      padding: 30px;
+      border-radius: 16px;
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      background: rgba(255,255,255,0.1);
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      color: #00adb5;
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(255,255,255,0.06);
+      padding: 35px;
+      border-radius: 16px;
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: none;
+      background: rgba(255,255,255,0.08);
+      color: white;
+    }
+
+    .contact-form button {
+      background: #00adb5;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #aaaaaa;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 60px 5%;
+      }
+      header h1 {
+        font-size: 34px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Glen George Shibu</h1>
+  <p>Bachelor of Computer Application</p>
+  <p>Kristu Jayanti (Deemed to be University)</p>
+
+  <a
+    href="http://localhost:5000/public/resume.pdf"
+    class="resume-btn"
+    target="_blank"
+  >
+    Download Resume
+  </a>
+</header>
+
+<nav>
+  <a href="#skills">Skills</a>
+  <a href="#certifications">Certifications</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="card-container">
+    <div class="card">
+      <h3>Communication Skills</h3>
+      <p>Strong verbal and written communication abilities.</p>
+    </div>
+    <div class="card">
+      <h3>Logical Skills</h3>
+      <p>Problem-solving using structured reasoning.</p>
+    </div>
+    <div class="card">
+      <h3>Analytical Skills</h3>
+      <p>Analyzing data and implementing solutions.</p>
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <h2>Certifications</h2>
+  <div class="card-container">
+    <div class="card"><h3>Front-End Web Developer</h3></div>
+    <div class="card"><h3>Digital Engineering</h3></div>
+    <div class="card"><h3>Java Programming</h3></div>
+    <div class="card"><h3>Python Programming</h3></div>
+    <div class="card"><h3>C++ Programming</h3></div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="card-container">
+    <div class="card">
+      <h3>Creation of a Portfolio</h3>
+      <p>Responsive portfolio website using HTML and CSS.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Information</h2>
+
+  <div class="contact-form">
+    <form id="contactForm">
+      <label>Your Name</label>
+      <input type="text" id="name" required />
+
+      <label>Your Email</label>
+      <input type="email" id="email" required />
+
+      <label>Your Message</label>
+      <textarea id="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p id="response" style="margin-top:15px;color:#00adb5;"></p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Glen George Shibu | All Rights Reserved
+</footer>
+
+<script>
+  const form = document.getElementById("contactForm");
+  const responseEl = document.getElementById("response");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const data = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      message: document.getElementById("message").value
+    };
+
+    try {
+      const res = await fetch("http://localhost:5000/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+
+      const result = await res.json();
+
+      responseEl.innerText = result.message;
+      responseEl.style.color = "#00ffb3";
+
+      form.reset();
+    } catch (err) {
+      responseEl.innerText = "❌ Backend not reachable";
+      responseEl.style.color = "red";
+    }
+  });
+</script>
+
+</body>
+</html>
