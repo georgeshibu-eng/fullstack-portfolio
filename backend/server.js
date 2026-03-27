@@ -1,15 +1,18 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
+require("dotenv").config(); // ✅ IMPORTANT
 
-const connectDB = require("./db");              // 👈 ADD
-const Contact = require("./models/Contact");   // 👈 ADD
+const connectDB = require("./db");
+const Contact = require("./models/Contact");
 
 const app = express();
-const PORT = 5000;
+
+// ✅ FIXED PORT
+const PORT = process.env.PORT || 5000;
 
 // Connect Database
-connectDB();                                    // 👈 ADD
+connectDB();
 
 app.use(cors());
 app.use(express.json());
@@ -22,14 +25,8 @@ app.post("/contact", async (req, res) => {
   try {
     const { name, email, message } = req.body;
 
-    // Save to MongoDB
-    const newContact = new Contact({
-      name,
-      email,
-      message
-    });
-
-    await newContact.save(); // ✅ STORED IN DB
+    const newContact = new Contact({ name, email, message });
+    await newContact.save();
 
     console.log("📩 New Contact Saved to DB");
 
@@ -44,5 +41,5 @@ app.post("/contact", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`✅ Backend running at http://localhost:${PORT}`);
+  console.log(`✅ Server running on port ${PORT}`);
 });
